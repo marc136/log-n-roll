@@ -118,7 +118,7 @@ function newLogger(logName = '', logLevel = 0) {
     if (typeof name !== 'string') {
       throw new TypeError(`Invalid name: ${name}`);
     }
-    level = (level || level === 0) ? level : logger().level;
+    level = (level || level === 0) ? level : logLevel;
 
     return loggers[name] || newLogger(name, level);
   };
