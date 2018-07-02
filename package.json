@@ -13,7 +13,7 @@
   "license": "MIT",
   "version": "0.2.0",
   "source": "src/log-n-roll.js",
-  "main": "dist/log-n-roll.js",
+  "main": "src/log-n-roll.js",
   "module": "dist/log-n-roll.m.js",
   "files": [
     "src",
