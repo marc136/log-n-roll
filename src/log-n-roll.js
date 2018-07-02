@@ -113,14 +113,14 @@ function unusePlugin(logger, plugin) {
   return logger;
 }
 
-function newLogger(logName, logLevel) {
-  const logger = (name, level) => {
-    name = name || '';
+function newLogger(logName = '', logLevel = 0) {
+  const logger = (name = '', level) => {
     if (typeof name !== 'string') {
       throw new TypeError(`Invalid name: ${name}`);
     }
+    level = (level || level === 0) ? level : logger().level;
 
-    return loggers[name] || newLogger(name, level || logger().level);
+    return loggers[name] || newLogger(name, level);
   };
 
   Object.defineProperties(logger, {
