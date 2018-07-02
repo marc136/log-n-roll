@@ -7,6 +7,10 @@ const plugins = [];
 const properties = [];
 const loggers = {};
 
+export function getAllLoggers() {
+  return loggers;
+}
+
 // Build the best logging method possible for this env
 // Wherever possible we want to bind, not wrap, to preserve stack traces
 function nativeRoller() {
