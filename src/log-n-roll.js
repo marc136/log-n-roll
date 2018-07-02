@@ -203,6 +203,11 @@ Object.defineProperties(log, {
       return levels.splice();
     },
   },
+  levelToString: {
+    value: (level) => {
+      return levels[level] || undefined
+    }
+  }
 });
 
 export default log;
